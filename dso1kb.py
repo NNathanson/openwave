@@ -241,13 +241,16 @@ class Dso:
 #############
             bArr = bytearray(rDat)
             pos = bArr.find(b'\n')
+            #pos2 = bArr.find('\x')
+
             header = bArr[0:pos]
+            print(header)
             dataS = bArr[pos:-1]
-            #print(dataS)
-            digits = (int(dataS[3]))
-            #skip = digits+3
-            print("SKIP", digits)
+            #dataSTest = bArr[pos:-1]
             dataS = bArr[pos+8:-1]
+
+            #if(dataS == dataSTest):
+                #print("True")
 #############
 
             #self.info[index]=self.read().decode('ascii').split(";") #original
